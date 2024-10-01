@@ -1,0 +1,171 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#container{
+    width:100vw;
+    height:100vh;
+    background-image: linear-gradient(45deg,pink,yellow,green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+#vidcontainer{
+    width:50vw;
+    height:54vh;
+   /* background-color: chartreuse;*/
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px black;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    
+}
+video{
+    width:100vw;
+    height: 100vh;
+    border-radius:5vw;
+    box-shadow: 5px 5px 5px black;
+    
+}
+#datacontainer{
+    width:50vw;
+    height:62vh;
+    background-color: rgba(58, 38, 174, 0.653);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5vw;
+    box-shadow: 2px 2px 2px black;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    
+}
+#anchor{
+position: absolute;
+margin-top: 51vw;
+display: flex;
+justify-content: center;
+align-items: center;
+color: transparent;
+}
+#a1{
+    text-decoration: none;
+color:black;
+}
+input{
+    letter-spacing: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width:40vw;
+    border-radius: 5px;
+}
+h1{
+    color:blanchedalmond;
+}
+#ball1{
+    background-image: linear-gradient(45deg,blue,pink,orange,red,black);
+    width:20vw;
+    height:20vh;
+    position: absolute;
+    border-radius: 100%;
+    right:15vw;
+    bottom: 10vw;
+    filter: blur(5px);
+animation: ball1 5s  infinite  alternate ease-in;
+
+}
+#ball2{
+    background-image: linear-gradient(45deg,blue,pink,orange,red,black);
+    width: 20vw;
+    height:20vh;
+    position: absolute;
+    border-radius: 100%;
+    right:3vw;
+    top: 3vw;
+    filter: blur(5px);
+    animation: ball2 10s  infinite  alternate ease-in-out;
+}
+#ball3{
+    background-image: linear-gradient(45deg,blue,pink,orange,red,black);
+    width:20vw;
+    height:20vh;
+    position: absolute;
+    border-radius: 100%;
+    left:7vw;
+    top:9vw;
+    filter: blur(5px);
+    animation: ball3 10s  infinite  alternate-reverse ease-out;
+}
+@keyframes ball1 {
+    0%,100%{
+        transform: translate(0px,0px) rotateY(180deg);
+      }  
+     
+      100%{
+        transform: translate(-500px,-400px) rotateY(180deg);
+      }
+  
+  }
+  
+  @keyframes ball2 {
+      0%{
+        transform: translate(0px,0px) rotateY(180deg);
+      }  
+      25%{
+        transform: translate(-400px,200px) rotateY(180deg);
+      }
+      50%{
+        transform: translate(-600px,-150px) rotateY(180deg);
+      }
+      75%{
+        transform: translate(0px,450px) rotateY(180deg);
+      }
+      100%{
+        transform: translate(100px,350px) rotateY(180deg);
+      }
+  }
+  @keyframes ball3 {
+      0%{
+        transform: translate(0px,0px) rotateY(180deg);
+      }  
+      25%{
+        transform: translate(400px,200px) rotateY(180deg);
+      }
+      
+     
+      100%{
+        transform: translate(100px,-300px) rotateY(180deg);
+      }
+  }
+#signup{
+  text-decoration: none;
+  width:40%;
+    height: 3vw;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    background-color: royalblue;
+    border: none;
+    outline: none;
+    font-size: 2vw;
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

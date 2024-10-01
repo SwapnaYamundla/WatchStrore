@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*{
+    margin:0px;
+    padding: 0px;
+}
+#body{
+width:100%;
+height: 100vh;
+background-image:linear-gradient(45deg,pink ,yellow ,green);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#containerBgimg{
+    width:100%;
+    height: 100vh;
+    position:absolute;
+    z-index: -1;
+    /*background-color: red;*/
+    overflow: hidden;
+}
+#watch1{
+position: absolute;
+transform: rotate(10deg) rotateY(18odeg);
+filter:drop-shadow(2px 2px 1px black);
+animation: watch1 10s infinite both alternate ease-in-out;
+}
+#watch2{
+position: absolute;
+right:3vw;
+transform: rotate(10deg) rotateY(18odeg);
+filter:drop-shadow(2px 2px 1px black);
+animation: watch2 15s infinite both reverse ease-in;
+}
+#watch3{
+position: absolute;
+bottom: 3vw;
+transform: rotate(20deg) rotateY(0deg);
+filter:drop-shadow(2px 2px 1px black);
+animation: watch3 20s infinite both alternate-reverse linear;
+    
+}
+#watch4{
+position: absolute;
+right:3vw;
+bottom: 3vw;
+transform: rotate(15deg) rotateY(180deg);
+filter:drop-shadow(2px 2px 1px black);
+animation: watch4 10s infinite both alternate linear;
+    
+}
+.watches{
+    width:20vw;
+}
+@keyframes watch1 {
+  0%{
+    transform: translate(0px,0px) rotateY(180deg);
+  }  
+  25%{
+    transform: translate(400px,200px) rotateY(180deg);
+  }
+  50%{
+    transform: translate(600px,-150px) rotateY(180deg);
+  }
+  75%{
+    transform: translate(0px,650px) rotateY(180deg);
+  }
+  100%{
+    transform: translate(600px,650px) rotateY(180deg);
+  }
+
+}
+
+@keyframes watch2 {
+    0%{
+      transform: translate(0px,0px) rotateY(180deg);
+    }  
+    25%{
+      transform: translate(-400px,200px) rotateY(180deg);
+    }
+    50%{
+      transform: translate(-600px,-150px) rotateY(180deg);
+    }
+    75%{
+      transform: translate(0px,450px) rotateY(180deg);
+    }
+    100%{
+      transform: translate(100px,350px) rotateY(180deg);
+    }
+}
+@keyframes watch3 {
+    0%{
+      transform: translate(0px,0px) rotateY(180deg);
+    }  
+    25%{
+      transform: translate(400px,200px) rotateY(180deg);
+    }
+    50%{
+      transform: translate(600px,-150px) rotateY(180deg);
+    }
+    75%{
+      transform: translate(0px,-450px) rotateY(180deg);
+    }
+    100%{
+      transform: translate(100px,-350px) rotateY(180deg);
+    }
+}
+@keyframes watch4 {
+  0%{
+    transform: translate(0px,0px) rotateY(180deg);
+  }  
+  25%{
+    transform: translate(200px,200px) rotateY(180deg);
+  }
+  50%{
+    transform: translate(-600px,-350px) rotateY(180deg);
+  }
+  75%{
+    transform: translate(100px,450px) rotateY(180deg);
+  }
+  100%{
+    transform: translate(100px,350px) rotateY(180deg);
+  }
+}
+#loginContainer{
+    width:50vw;
+    height: 30vw;
+    background-color: rgba(0, 0, 0, 0.51);
+    border-radius: 1vw;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0.1vw 0.1vw 0.2vw black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#passVis{
+    width:4vw;
+    cursor:pointer;
+    transition: all 0.5s;
+    padding-left: 20px;
+
+}
+#passVis:hover{
+transform: rotate(-20deg);
+filter: hue-rotate(125deg);
+
+}
+#loginHeading{
+    color:yellow;
+    text-shadow: 2px 2px 2px black;
+    font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#email,#passContainer{
+    width: 80%;
+    height: 3vw;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    border-bottom: 0.5vw solid white;
+    columns: white;
+    letter-spacing: 1vw;
+    font-size: 2vw;
+    box-shadow: 0px 5px 2px  black;
+}
+#email::placeholder,#pass::placeholder{
+    color:white;
+    letter-spacing: 0.8vw;
+    font-size: 2vw;
+
+}
+#passContainer{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#pass{
+    width:90%;
+    height: 100%;
+    background-color: transparent;
+    border:none;
+    color: white;
+    outline: none;
+    font-size: 2vw;
+    letter-spacing: 1vw;
+}
+#login{
+    width:40%;
+    height: 3vw;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    background-color: royalblue;
+    border: none;
+    outline: none;
+    font-size: 2vw;
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login:hover{
+    animation: buttonanimation 0.5s 1 both alternate;
+    cursor: pointer;
+}
+@keyframes  buttonanimation{
+  0%,100%{
+    transform: rotate(0deg) skew (0deg,0deg);
+  }  
+  25%{
+    transform: rotate(10deg) skew(5deg,10deg);
+  }
+  
+  50%{
+    transform: rotate(-10deg) skew(-5deg,-10deg);
+  }
+  75%{
+    transform: rotate(15deg) skew(7deg,15deg);
+  }
+}
+#a1{
+    color:white;
+    text-decoration: none;
+    letter-spacing: 0.5vw;
+    font-size: 1.5vw;
+}
+#anc1{
+  margin-top: -10%;
+  color: red;
+}
